@@ -42,7 +42,7 @@
  }
  ?>
 
-  <script src="./vue/js/script.js"></script>
+  <script src="./vue/script.js"></script>
 
   <!-- FIN -->
   
