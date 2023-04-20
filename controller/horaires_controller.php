@@ -19,7 +19,6 @@ if(isset($_POST['ouverture'], $_POST['midi'],$_POST['soir']))
 
 	$newJsonString = json_encode($data,JSON_PRETTY_PRINT);
 	file_put_contents('./config.json', $newJsonString);
-
 	header('Location: index.php?uc=admin');	
 }
 

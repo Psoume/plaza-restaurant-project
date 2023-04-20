@@ -567,3 +567,51 @@ margin-top:8vh;
 	padding:2vh 1vw;
 	border-radius: 1.5em;
 }
+
+.connexion{
+	display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr;
+  gap: 0px 5%; 
+  grid-template-areas: 
+    "formConnexion illuConnexion"; 
+   background-color: var(--lightpink);
+   height: 80vh;
+   margin : 0 5vw;
+   width: 90vw;
+}
+
+.illuConnexion { 
+	grid-area: illuConnexion; 
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+	width: 100%;
+}
+
+.formConnexion { 
+	grid-area: formConnexion; 
+}
+
+.formConnexion form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 40vh;
+	padding:0 5vw;
+}
+
+.formConnexion input{
+	height: 5vh;
+}
+
+.formConnexion input[type=submit]{
+display: block;
+	background-color: var(--lightblue);
+	color:var(--white);
+	border-radius: 1.5em;
+	width: 10vw;
+	margin-left: 20vw;
+
+}
+
