@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>
       <?php 
-      include './modele/bddconnector.php'; 
+      include './model/bddconnector.php'; 
 
       if (!isset($_SESSION))
       {
@@ -17,14 +17,14 @@
       ?>
   </title>
 
-  <link rel="stylesheet" href="./vue/style.css">
+  <link rel="stylesheet" href="./view/style.css">
 
 <!-- Polices -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Work+Sans:ital,wght@0,100;0,300;0,800;0,900;1,100;1,300&display=swap" rel="stylesheet">
 <!-- End Polices -->
-
+<script src="https://kit.fontawesome.com/af6c2eb4a4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
  }
  ?>
 
-  <script src="./vue/script.js"></script>
+  <script src="./view/script.js"></script>
 
   <!-- FIN -->
   

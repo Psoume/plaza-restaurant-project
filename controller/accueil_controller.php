@@ -1,5 +1,5 @@
 <?php  
-include './vue/php/header.php'; 
-include './vue/php/accueil.php'; 
-include './vue/php/footer.php'; 
+include './view/php/header.php'; 
+include './view/php/accueil.php'; 
+include './view/php/footer.php'; 
 ?>

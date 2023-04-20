@@ -1,0 +1,352 @@
+/* html5doctor.com/html-5-reset-stylesheet/ */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,time,mark,audio,video { margin:0;padding:0;border:0;outline:0;font-size:100%;font-weight : normal;vertical-align:baseline;background:transparent; } 
+body { line-height:1; }
+ol,ul { list-style:none; }
+blockquote,q { quotes:none; }
+blockquote:before,blockquote:after,q:before,q:after { content:'';content:none; }
+ins { text-decoration:none; }
+del { text-decoration:line-through; }
+table { border-collapse:collapse;border-spacing:0; }
+
+/*----------------------------------------------------------------------*/
+
+/*VARIABLES GLOBALES*/
+:root {
+--lightpink : rgba(203, 153, 126, 1);
+--blue 		: rgba(27, 64, 121, 1);
+--lightblue : rgba(77, 124, 138, 1);
+--white		: rgba(254, 241, 231, 1);
+--alpha		: rgba(0, 0, 0, 0.5);
+
+
+}
+
+body{
+	background-color: var(--white);
+	font-family: 'Work Sans', sans-serif;
+}
+
+li a{
+	color: var(--white);
+	font-size: 2.5vw;
+}
+
+a{
+	text-decoration: none;
+}
+
+h1{
+	color: var(--blue);
+	font-size: 4.375vw;
+	text-align: center;
+	font-family: 'Merriweather', serif;
+	padding:4rem 0;
+	text-decoration: underline;
+	text-decoration-color: var(--lightblue);
+	text-decoration-thickness: 25%;
+	text-underline-offset: .5em;
+	text-transform: uppercase;
+}
+
+h2{
+	font-family: 'Merriweather', serif;
+	font-size: 5vw;
+	text-transform: uppercase;
+}
+
+h3{
+	font-size: 2.5vw;
+	font-family: 'Merriweather', serif;
+}
+
+p{
+	font-size: 2.5vw;
+	font-family: 'Work Sans', sans-serif;
+}
+
+textarea{
+	font-family: 'Work Sans', sans-serif;
+}
+
+input{
+	font-family: 'Work Sans', sans-serif;
+}
+
+.btn_bleu{
+	background-color: var(--lightblue);
+	border-radius: 1rem;
+	color: var(--white);
+	font-size: 2.5vw;
+	border:none;
+}
+
+/*HEADER*/
+
+header img{
+	width:100%;
+	height: 75vh;
+	object-fit: cover;
+	object-position: center;
+}
+
+header nav {
+	background-color: var(--lightpink);
+	position: fixed;
+	top: 0;
+  width: 100%;
+  display: none;
+  z-index: 2;
+  border-bottom:1px solid black;
+}
+
+header nav ul {
+	display: flex;
+	margin: auto;
+	width: 80%;
+	justify-content: space-around;
+}
+
+header nav ul li{
+	padding:.5em 10vw;
+}
+
+/*FOOTER*/
+
+footer{
+	background-color: var(--lightblue);
+	height: 50vh;
+	margin-top:20vh;
+	display: flex;
+}
+
+footer div{
+	width: 50%;
+	padding-left:10%;
+}
+
+footer div h3{
+		padding-top: 6vh;
+		padding-bottom: 2vh;
+}
+
+footer div ul{
+	font-size: 1.875em;
+	font-family: 'Work Sans', sans-serif;
+}
+
+footer img{
+	width: 50%;
+	display: inline-block;
+	margin-top: 5vh;
+}
+
+footer tr{
+	border-bottom: solid black .4em;
+
+}
+
+footer td:first-child{
+	padding-right:2.5em;
+	width: 2vw;
+}
+
+
+/*GALERIE*/
+
+.galerie{
+  width: 90%;
+  height: 100vh;
+  margin: 4rem auto;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 2% 2%; 
+  grid-template-areas: 
+    ". img2"
+    "img1 img2"
+    "img1 img2"
+    "img1 img2"
+    "img1 img3"
+    "img1 img3"
+    ". img3"; 
+}
+
+.galerie img{
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 2.5em;
+	box-shadow: .5em .5em 1em var(--alpha);
+}
+
+.galerie .img1 { 
+	grid-area: img1; 
+}
+
+.galerie .img2 { 
+grid-area: img2; 
+}
+
+.galerie .img3 { 
+grid-area: img3; 
+}
+
+.galerie div{
+	position:absolute;
+	background-color: var(--lightpink);
+	height: 80vh;
+	width: 100%;
+	margin-top:10vh;
+	margin-bottom:10vh;
+	z-index: -1;
+	left:0;
+}
+
+/*PRESENTATION*/
+.presentation_equipe{
+	display: flex;
+	align-items: center;
+
+}
+
+.presentation_equipe p{
+	display: inline-block;
+	width: 50%;
+	padding: 0 5%;
+	text-align: right;
+}
+
+.presentation_equipe img{
+	display: inline;
+	width: 35vh;
+	height: 35vh;
+	border-radius: 50%;
+	border: solid var(--lightpink) 5em;
+	object-fit: cover;
+	float: right;
+	margin-right: 15%;
+}
+
+.presentation_equipe div{
+	position:absolute;
+	background-color: var(--lightpink);
+	height: 40vh;
+	width: 100%;
+	margin-top:10vh;
+	margin-bottom:10vh;
+	z-index: -1;
+	left:0;
+}
+
+
+/*DESCRIPTION*/
+
+.description{
+	position: relative;
+	height: 110vh;
+	margin-top:10vh;
+}
+
+.description img{
+	height: 110vh;
+	border-radius: 2em;
+	position: absolute;
+	left:10%;
+}
+
+.description div{
+	width: 90vh;
+	height: 90vh;
+	background-color: var(--lightblue);
+	border-radius: 50%;
+	position: absolute;
+	left:45%;
+	top:10vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: -1;
+	box-shadow: .5em .5em 1em var(--alpha);
+}
+
+.description div ul{
+	list-style: inside;
+	color : var(--white);
+	font-size: 2.5em;
+	display: grid;
+  gap: 5vh;
+}
+
+/*CARTE*/
+.carte{
+	background-image: url("./img/paper.jpg");
+	background-position: center;
+	background-size:cover ;
+	background-repeat: no-repeat;
+	height: 80vh;
+	width: 90%;
+	margin: auto;
+	border-radius: 2.5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: .5em .5em 1em var(--alpha);
+	margin-top:10vh;
+}
+
+.carte div{
+	position:absolute;
+	background-color: var(--lightpink);
+	height: 50vh;
+	width: 100%;
+	margin-top:10vh;
+	margin-bottom:10vh;
+	left:0;
+	z-index: -1;
+}
+
+.carte h2{
+	margin-top:10vh;
+	margin-bottom:5vh;
+}
+
+/*FORMULAIRE*/
+.titre_formulaire{
+	margin-top: 8vh;
+	margin-bottom: 8vh;
+	margin-left: 4vh;
+}
+
+.formulaire{
+	background-color: var(--lightpink);
+	display: grid; 
+	padding:8vh 19vw;
+  grid-template-columns: 25vw 25vw; 
+  grid-template-rows: 3vw 3vw  3vw  3vw ; 
+  gap: 2vw 10vw; 
+  grid-template-areas: 
+    "input1 input2"
+    "input3 input3"
+    "input4 input4"
+    "input4 input4"
+    ". input5"; 
+}
+
+.formulaire .champ_contact{
+	background-color: var(--white);
+	display: inline-block;
+}
+
+.input1 { grid-area: input1; }
+.input2 { grid-area: input2; }
+.input3 { grid-area: input3; }
+.input4 { grid-area: input4; }
+.input5 { grid-area: input5; }
+
+
+
+.formulaire .btn_bleu{
+	float:right;
+}
+
