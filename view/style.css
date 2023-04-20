@@ -59,8 +59,14 @@ h3{
 	font-family: 'Merriweather', serif;
 }
 
+h4{
+	font-size: 1.8vw;
+	font-family: 'Merriweather', serif;
+	text-decoration: underline;
+}
+
 p{
-	font-size: 2.5vw;
+	font-size: 1.8vw;
 	font-family: 'Work Sans', sans-serif;
 }
 
@@ -114,7 +120,7 @@ header nav ul li{
 
 footer{
 	background-color: var(--lightblue);
-	height: 50vh;
+	height: 56vh;
 	margin-top:20vh;
 	display: flex;
 }
@@ -350,3 +356,214 @@ grid-area: img3;
 	float:right;
 }
 
+
+/*PANEL ADMIN*/
+.panelAdmin{
+  display: grid;
+  margin : 0 2.5vw;
+  padding: 5vh 5vw;
+  height: 150vh; 
+  width: 85vw;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 5% 5%; 
+  grid-template-areas: 
+    "Plats Menus"
+    "Images Horaires"; 
+  background-color: var(--lightpink);
+}
+
+.panelAdmin > div{
+  background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: .5em .5em 1em var(--alpha);
+	border-radius: 1.5em;
+}
+
+.Plats { 
+	grid-area: Plats; 
+	background-image: url("./img/pasta.jpg");
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 50vh;
+}
+
+.Plats div{
+	background-color: var(--white);
+	padding: 2.5vw;
+	border-radius: 1em;
+}
+
+.Menus { 
+	grid-area: Menus;
+  background-image: url("./img/cheese.jpg");
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 50vh;
+}
+
+.Menus div{
+	background-color: var(--white);
+	padding: 2.5vw;
+	border-radius: 1em;
+}
+
+.Images { 
+	grid-area: Images; 
+	background-color: var(--white);
+}
+
+.Images div{
+	position:relative;
+}
+
+.galerie_admin{
+  display: grid; 
+  padding: 1vh;
+  height: 80%;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  
+  gap:1% 1%;
+  grid-template-areas: 
+    ". img2"
+    "img1 img2"
+    "img1 img2"
+    "img1 img2"
+    "img1 img3"
+    "img1 img3"
+    ". img3"; 
+}
+
+.galerie_admin img{
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 1em;	
+	box-shadow: .5em .5em 1em var(--alpha);
+}
+
+.galerie_admin .img1 { 
+	grid-area: img1; 
+}
+
+.galerie_admin .img2 { 
+grid-area: img2; 
+}
+
+.galerie_admin .img3 { 
+grid-area: img3; 
+}
+
+.Images input[type=submit]{
+display: block;
+background-color: var(--lightblue);
+color:var(--white);
+padding:2vh 5vw;
+border-radius: 1.5em;
+margin-bottom: 3vh;
+margin-left:3vw;
+}
+
+.Images form div input{
+	position: absolute;
+}
+
+#img1{
+  top: 40%;
+  right: 10%;
+  left:10%;
+  width: 60%;
+  background-color: var(--white);
+  padding: 10%; 
+  display: block;
+  border-radius: 1.5em;
+
+}
+#img2{
+  top: 40%;
+  right: 10%;
+  left:10%;
+  width: 60%;
+  background-color: var(--white);
+  padding: 10%; 
+  display: block;
+  border-radius: 1.5em;
+}
+#img3{
+  top: 40%;
+  right: 10%;
+  left:10%;
+  width: 60%;
+  background-color: var(--white);
+  padding: 10%; 
+  display: block;
+  border-radius: 1.5em;
+}
+
+
+.Horaires { 
+	grid-area: Horaires; 
+	background-color: var(--white);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Horaires textarea{
+	resize: none;
+	margin-bottom:1vw ;
+	display: block;
+}
+
+.Horaires input[type=submit]{
+display: block;
+	background-color: var(--lightblue);
+	color:var(--white);
+	padding:2vh 5vw;
+	border-radius: 1.5em;
+	margin:auto;
+}
+
+.Horaires input{
+	margin-bottom:1vw ;
+	display: block;
+}
+
+.Horaires h3{
+text-decoration: underline;
+margin: auto;
+margin-bottom: 4vh;
+margin-top:8vh;
+}
+
+.navAdmin{
+	background-color: var(--lightpink);
+	margin-bottom: 5vh ;
+	padding : 2vh 3vw;
+	display: flex;
+	align-items: center;
+	 justify-content: space-between;
+
+}
+
+.navAdmin div span{
+	color:var(--white);
+	font-size: 2.5vw;
+}
+
+.navAdmin div a{
+	color:var(--blue);
+	font-size: 1.3vw;
+	text-decoration: underline;
+}
+
+.retourSite{
+	background-color: var(--lightblue);
+	color:var(--white);
+	padding:2vh 1vw;
+	border-radius: 1.5em;
+}

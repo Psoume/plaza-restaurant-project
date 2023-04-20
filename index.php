@@ -5,10 +5,12 @@
   <title>
       <?php 
       include './model/bddconnector.php'; 
+      include './model/admin.php'; 
 
       if (!isset($_SESSION))
       {
         session_start();
+        $_SESSION['config']=json_decode(file_get_contents('./config.json'),true);
       }
       if (isset($_GET['uc'])) {
       }else{

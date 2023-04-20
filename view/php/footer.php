@@ -7,14 +7,16 @@
 			<li><i class="fa-solid fa-envelope"></i> restaurant-grand-plaza-pau@orange.fr</li>
 		</ul>
 		<h3>Horaires :</h3>
+		<p>Ouverture : <?php echo $_SESSION['config']["jours"] ; ?></p>
+		<br>
 		<table>
 			<tr>
 				<td>MIDI</td>
-				<td>11:00 - 15:00</td>
+				<td><?php echo $_SESSION['config']['horaires'][0] ; ?></td>
 			</tr>
 			<tr>
 				<td>SOIR</td>
-				<td>18:00 - 23:00</td>
+				<td><?php echo $_SESSION['config']['horaires'][1] ; ?></td>
 			</tr>
 		</table>
 	</div>

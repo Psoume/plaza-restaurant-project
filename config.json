@@ -1,0 +1,22 @@
+{
+    "menu": [
+        "MenuP\u00e2ques",
+        "MenuP\u00e2ques",
+        "MenuPoisson",
+        "MenuVeau",
+        "MenuV\u00e9g\u00e9tarien",
+        "MenuR\u00e9gional",
+        "MenuV\u00e9g\u00e9tarien"
+    ],
+    "horaires": [
+        "11:00 - 15:00",
+        "18:00 - 23:00"
+    ],
+    "jours": "mardi-samedi",
+    "email": "restaurant-grand-plaza-pau@orange.fr",
+    "galerie": [
+        "galerie0.jpg",
+        "galerie1.jpg",
+        "galerie2.jpg"
+    ]
+}

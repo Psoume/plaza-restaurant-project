@@ -1,8 +1,8 @@
 
 <div class='galerie'>
-	<img class='img1' src="./view/img/salad.jpg">
-	<img class='img2' src="./view/img/catering.jpg">
-	<img class='img3' src="./view/img/cake.jpg">
+	<img class='img1' src="./view/img/<?php echo $_SESSION['config']['galerie'][0] ; ?>">
+	<img class='img2' src="./view/img/<?php echo $_SESSION['config']['galerie'][1] ; ?>">
+	<img class='img3' src="./view/img/<?php echo $_SESSION['config']['galerie'][2] ; ?>">
 	<div></div>
 </div>
 
