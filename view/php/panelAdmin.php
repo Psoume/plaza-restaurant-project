@@ -1,29 +1,24 @@
-<div class='navAdmin'>
-	<div>
-		<span><?php echo $_SESSION['admin']->getFirstName()." ".strtoupper($_SESSION['admin']->getName()) ?></span>
-		<a href="./index.php?uc=deconnexion">Deconnexion</a>
-	</div>
-	<a class='retourSite' href="./index.php?">Revenir au site</a>
-</div>
-
 <div class='panelAdmin'>
 
 
-  <div class="Plats">
+  <!-- <a href="./index.php?uc=plats"> -->
+  	<div class="Plats">
   	<div>
-  		<h3>Gérer les plats</h3>
+  		<a href="./index.php?uc=plats"><h3>Gérer les plats</h3></a>
   	</div>
   </div>
+<!-- </a> -->
 
 
   <div class="Menus">
   	  <div>
-  		<h3>Gérer les menus</h3>
+  		<a href="./index.php?uc=menus"><h3>Gérer les menus</h3></a>
   	</div>
   </div>
 
 
   <div class="Images">
+  	<h3>Galerie</h3>
   	<form action="./index.php?uc=images" method="post" enctype="multipart/form-data">
   		<div class='galerie_admin'>
   			<div class='img1'>

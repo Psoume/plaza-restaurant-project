@@ -13,12 +13,11 @@ table { border-collapse:collapse;border-spacing:0; }
 /*VARIABLES GLOBALES*/
 :root {
 --lightpink : rgba(203, 153, 126, 1);
---blue 		: rgba(27, 64, 121, 1);
+--pink      : rgba(159, 107, 90, 1);
+--blue 		  : rgba(27, 64, 121, 1);
 --lightblue : rgba(77, 124, 138, 1);
---white		: rgba(254, 241, 231, 1);
---alpha		: rgba(0, 0, 0, 0.5);
-
-
+--white		  : rgba(254, 241, 231, 1);
+--alpha		  : rgba(0, 0, 0, 0.5);
 }
 
 body{
@@ -390,6 +389,14 @@ grid-area: img3;
 	min-height: 50vh;
 }
 
+.Plats a{
+	color:black;
+}
+
+.Plats a:hover{
+	color:var(--blue);
+}
+
 .Plats div{
 	background-color: var(--white);
 	padding: 2.5vw;
@@ -411,9 +418,23 @@ grid-area: img3;
 	border-radius: 1em;
 }
 
+.Menus a{
+	color:black;
+}
+
+.Menus a:hover{
+	color:var(--blue);
+}
 .Images { 
 	grid-area: Images; 
 	background-color: var(--white);
+}
+
+.Images h3{
+padding-top:5vh;
+padding-left: 5vw;
+text-decoration: underline;
+
 }
 
 .Images div{
@@ -422,7 +443,7 @@ grid-area: img3;
 
 .galerie_admin{
   display: grid; 
-  padding: 1vh;
+  padding: 0 1vw;
   height: 80%;
   grid-template-columns: 1fr 1fr; 
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  
@@ -612,6 +633,116 @@ display: block;
 	border-radius: 1.5em;
 	width: 10vw;
 	margin-left: 20vw;
-
 }
 
+
+/*LES PLATS*/
+.plats {
+  display: grid; 
+  grid-template-columns: 0.5fr 1.5fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 5%; 
+  grid-template-areas: 
+    "listePlats detailsPlats"; 
+}
+.detailsPlats { 
+	grid-area: detailsPlats; 
+}
+.listePlats { 
+	grid-area: listePlats; 
+	margin:auto;
+	height:75vh;
+	overflow: scroll;
+	border: .2em solid black;
+}
+
+
+.listePlats li{
+	padding: 1vh 0;
+	background-color: var(--lightpink);
+	color:var(--white);
+	font-size: 1.5vw;
+	border-bottom: .1em solid black;
+}
+
+.listePlats li:hover{
+	background-color: var(--pink);
+	cursor: pointer;
+	color:black;
+}
+
+.detailsPlats input{
+	margin-bottom: 2vh;
+}
+
+.detailsPlats select{
+	margin-bottom: 2vh;
+}
+
+.detailsPlats fieldset{
+	margin-bottom: 2vh;
+}
+
+.detailsPlats label{
+	width: 10vw;
+	display: inline-block;
+}
+
+.detailsPlats input[name='description']{
+	width: 40vw;
+	height: 5vh;
+}
+
+.detailsPlats input[name='name']{
+	width: 15vw;
+}
+
+.detailsPlats input[name='price']{
+	width: 15vw;
+}
+
+input[name='name']+ label{
+margin-left: 4vw;
+display: inline;
+}
+
+.detailsPlats h4{
+	margin-bottom:10vh;
+}
+
+legend{
+	text-decoration: underline;
+}
+
+.detailsPlats input[type='submit']{
+display: block;
+background-color: var(--lightblue);
+color:var(--white);
+padding:2vh 5vw;
+font-size: 1.2vw;
+border-radius: 1.5em;
+margin-bottom: 3vh;
+margin-left:3vw;
+}
+
+.retour_admin{
+	background-color: var(--lightblue);
+	padding:0.5vw 0.5vh;
+	color:var(--white);
+	font-size: 1.2vw;
+	float: right;
+	margin-right: 10vw;
+	border-radius: 1.5em;
+}
+
+/*LES MENUS*/
+.menus {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 5%; 
+  grid-template-areas: 
+    "menuMidi menuSoir"; 
+}
+.menuMidi { grid-area: menuMidi; }
+.menuSoir { grid-area: menuSoir; }

@@ -5,7 +5,10 @@
   <title>
       <?php 
       include './model/bddconnector.php'; 
-      include './model/admin.php'; 
+      include './model/admin.php';
+      include './model/allergen.php';
+      include './model/dish.php'; 
+      include './model/menu.php'; 
 
       if (!isset($_SESSION))
       {
@@ -27,10 +30,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Work+Sans:ital,wght@0,100;0,300;0,800;0,900;1,100;1,300&display=swap" rel="stylesheet">
 <!-- End Polices -->
 <script src="https://kit.fontawesome.com/af6c2eb4a4.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 
 <body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 
  <?php 
 

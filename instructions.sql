@@ -15,7 +15,7 @@ CREATE TABLE plaza.Course (
 CREATE TABLE plaza.Menu (
     idMenu int NOT NULL AUTO_INCREMENT,
     name varchar(50) NOT NULL,
-    price int NOT NULL,
+    price int,
     isAvailable Boolean,
     description varchar(255),
     PRIMARY KEY (idMenu)
@@ -35,7 +35,7 @@ CREATE TABLE plaza.Dish (
     name varchar(255) NOT NULL,
     price int NOT NULL,
     description varchar(255),
-    category varchar(50),
+    isAvailable Bool,
     idCourse int NOT NULL,
     idMenu int,
     PRIMARY KEY (idDish),
@@ -56,12 +56,12 @@ INSERT INTO plaza.Allergen (name, icon) VALUES
 ('Noix', 'nuts_icon.png'),
 ('Soja', 'soy_icon.png'),
 ('Moutarde', 'mustard_icon.png'),
-('Végétarien','vegetarian_icon.png');
 
 INSERT INTO plaza.Course (name) VALUES
 ('Entrée'),
-('Plat principal'),
-('Dessert');
+('Plat'),
+('Dessert'),
+('Boisson');
 
 INSERT INTO plaza.Menu (name, price, isAvailable, description) VALUES
 ('Menu du jour', 25, true, 'Entrée, plat et dessert au choix'),
@@ -71,14 +71,14 @@ INSERT INTO plaza.Menu (name, price, isAvailable, description) VALUES
 INSERT INTO plaza.Admin (name, firstName, password, mail) VALUES
 ('Vinel', 'Lorraine', '123', 'lorraine@orange.fr');
 
-INSERT INTO plaza.Dish (name, price, description, idCourse, idMenu) VALUES
-('Salade de chèvre chaud', 8, 'Salade verte, toasts de chèvre chaud, vinaigrette', 1, 1),
-("Soupe à l'oignon", 6, "Soupe d'oignons gratinée au fromage", 1, 1),
-('Steak frites', 15, 'Steak haché de bœuf, frites maison', 2, 1),
-('Lasagnes', 14, 'Lasagnes à la bolognaise, salade verte', 2, 1),
-('Mousse au chocolat', 5, 'Mousse légère au chocolat noir', 3, 1),
-('Tarte aux pommes', 4, 'Tarte aux pommes maison, glace vanille', 3, 1),
-('Salade niçoise', 9, 'Salade niçoise avec thon, oeuf dur, olives', 1, 2);
+INSERT INTO plaza.Dish (name, price, description, isAvailable,idCourse, idMenu) VALUES
+('Salade de chèvre chaud', 8, 'Salade verte, toasts de chèvre chaud, vinaigrette',1, 1, 1),
+("Soupe à l'oignon", 6, "Soupe d'oignons gratinée au fromage",1, 1, 1),
+('Steak frites', 15, 'Steak haché de bœuf, frites maison',1, 2, 1),
+('Lasagnes', 14, 'Lasagnes à la bolognaise, salade verte',1, 2, 1),
+('Mousse au chocolat', 5, 'Mousse légère au chocolat noir',1, 3, 1),
+('Tarte aux pommes', 4, 'Tarte aux pommes maison, glace vanille',1, 3, 1),
+('Salade niçoise', 9, 'Salade niçoise avec thon, oeuf dur, olives',1, 1, 2);
 
 INSERT INTO plaza.Dish (name, price, description, idCourse, idMenu) VALUES
 ('Ratatouille', 12, 'Ratatouille de légumes provençaux', 2, 2),
@@ -104,7 +104,4 @@ INSERT INTO plaza.Presents (idDish, idAllergen) VALUES
 (9, 3),
 (10, 1),
 (10, 2),
-(11, 1),
-(1,6),
-(1,6),
-(8,6);
+(11, 1);

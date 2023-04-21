@@ -53,6 +53,7 @@ if(isset($_FILES['img1']) or isset($_FILES['img2']) or isset ($_FILES['img3']))
 	
 			$img = htmlspecialchars(basename($target_file));
 			$data["galerie"][$i] = $img; 
+			$_SESSION['config']['galerie'][$i] = $img;
 		}
 		
 	}

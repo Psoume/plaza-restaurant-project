@@ -2,6 +2,7 @@
 
 if (isset($_SESSION['admin']))
     {
+        include './view/php/navAdmin.php';
     	include './view/php/panelAdmin.php';
     }
 
