@@ -2,17 +2,24 @@
 <?php 
 class Admin
 {
+   private $idAdmin; 
    private $firstName;
    private $name;
    private $password;
    private $mail;
 
-   public function __construct($firstName, $name, $password, $mail)
+   public function __construct($idAdmin,$firstName, $name, $password, $mail)
    {
+      $this->idAdmin = $idAdmin;
       $this->firstName = $firstName;
       $this->name = $name;
       $this->password = $password;
       $this->mail = $mail;
+   }
+
+    public function getIdAdmin()
+   {
+       return $this->idAdmin;
    }
 
    public function getFirstName()
@@ -73,11 +80,51 @@ class Admin
       $data->execute();
       $result = $data->fetch();
       if ($result != NULL) {
-         $admin = new self($result['firstName'], $result['name'], $result['password'], $result['mail']);
+         $admin = new self($result['idAdmin'],$result['firstName'], $result['name'], $result['password'], $result['mail']);
          return $admin;
       } else {
          return FALSE;
       }
+   }
+
+    public function changePassword()
+   {
+      $sql = "update Admin set password = :password where idAdmin=:idAdmin;";
+      $data = PDOBD::getInstance()->getPdo()->prepare($sql);
+      $password=$this->password;
+      $data->bindValue(':password', $password,PDO::PARAM_STR);
+      $data->bindValue(':idAdmin', $this->idAdmin,PDO::PARAM_INT);
+      $data->execute();
+   }
+
+    public function changeMail()
+   {
+      $sql = "update Admin set mail = :mail where idAdmin=:idAdmin;";
+      $data = PDOBD::getInstance()->getPdo()->prepare($sql);
+      $mail = $this->mail;
+      $data->bindValue(':mail', $mail,PDO::PARAM_STR);
+      $data->bindValue(':idAdmin', $this->idAdmin,PDO::PARAM_INT);
+      $data->execute();
+   }
+
+       public function changeName()
+   {
+      $sql = "update Admin set name = :name where idAdmin=:idAdmin;";
+      $data = PDOBD::getInstance()->getPdo()->prepare($sql);
+      $name = $this->name;
+      $data->bindValue(':name', $name,PDO::PARAM_STR);
+      $data->bindValue(':idAdmin', $this->idAdmin,PDO::PARAM_INT);
+      $data->execute();
+   }
+
+       public function changeFirstName()
+   {
+      $sql = "update Admin set firstName = :firstName where idAdmin=:idAdmin;";
+      $data = PDOBD::getInstance()->getPdo()->prepare($sql);
+      $firstName = $this->firstName;
+      $data->bindValue(':firstName', $firstName,PDO::PARAM_STR);
+      $data->bindValue(':idAdmin', $this->idAdmin,PDO::PARAM_INT);
+      $data->execute();
    }
 }
 

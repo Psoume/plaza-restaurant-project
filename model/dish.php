@@ -129,11 +129,11 @@ class Dish
 
         public static function findCourse($idCourse) 
     {
-      $sql = "select distinct name from Course Where idCourse = :idCourse;";
+      $sql = "select name from Course Where idCourse = :idCourse;";
       $data = PDOBD::getInstance()->getPdo()->prepare($sql);
       $data->bindValue(':idCourse', $idCourse,PDO::PARAM_INT);
       $data->execute();
-      $result = $data->fetch();
+      $result = $data->fetch()[0];
       return $result;
     }
 

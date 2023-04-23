@@ -5,19 +5,19 @@
 if(isset($_POST['idPlat'],$_POST['name'], $_POST['price'],$_POST['description'],$_POST['course']))	
 {
 	$listAllergens = Allergen::getAllergens(); //liste d'objets allergènes
-	$idPlat=$_POST['idPlat'];
-	$name = $_POST['name']; 
-	$price =str_replace('€','',$_POST['price']);
-	$description = $_POST['description']; 
-	$course = $_POST['course']; 
-	if(isset($_POST['available']) and $_POST['available']=='on')
+	$idPlat=htmlspecialchars($_POST['idPlat'], ENT_QUOTES, 'UTF-8');
+	$name = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8'); 
+	$price =str_replace('€','',htmlspecialchars($_POST['price']), ENT_QUOTES, 'UTF-8');
+	$description = htmlspecialchars($_POST['description'], ENT_QUOTES, 'UTF-8'); 
+	$course = htmlspecialchars($_POST['course'], ENT_QUOTES, 'UTF-8'); 
+	if(isset($_POST['available']) and $_POST['available'])=='on'
 		{$available=1;} else{ $available=0;}
 	$allergens =[];
 
 
 	foreach ($listAllergens as $a) 
 	{
-		if(isset($_POST[$a->getName()]) and $_POST[$a->getName()]=='on')
+		if(isset($_POST[$a->getName()]) and $_POST[$a->getName()])=='on'
 		{
 			$allergens[]=$a;
 		}
@@ -25,15 +25,13 @@ if(isset($_POST['idPlat'],$_POST['name'], $_POST['price'],$_POST['description'],
 
 
 	$plat = new Dish($idPlat,$name,$price,$description,$available,$course,$allergens);
-	var_dump($_POST);
 	$plat->updateDish();
 	header('Location: index.php?uc=plats');	
 }
 
 else
 {
-	echo 'pas ok !';
-	var_dump($_POST);
+
 	header('Location: index.php?uc=plats');		
 }
 
