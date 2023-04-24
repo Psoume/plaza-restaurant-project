@@ -8,22 +8,21 @@
 <?php 
       include './model/bddconnector.php'; 
       include './model/admin.php';
+
       include './model/allergen.php';
       include './model/dish.php'; 
-      include './model/menu.php'; 
 
+      include './model/menu.php'; 
+ 
       if (!isset($_SESSION))
       {
         session_start();
         $_SESSION['config']=json_decode(file_get_contents('./config.json'),true);
       }
-      if (isset($_GET['uc'])) {
-      }else{
-          echo "accueil"; 
-      }
+
       ?>
- <link rel="stylesheet" media="screen and (min-width: 900px)" href="./view/style.css">
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="./view/styleMobile.css">
+ <link rel="stylesheet" media="screen and (min-width: 800px)" href="./view/style.css">
+<link rel="stylesheet" media="screen and (max-width: 800px)" href="./view/styleMobile.css">
 
 <!-- Polices -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +35,6 @@
 </head>
 
 <body>
-
 
  <?php 
 

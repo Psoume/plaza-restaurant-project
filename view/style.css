@@ -89,7 +89,7 @@ input{
 
 header img{
 	width:100%;
-	height: 75vh;
+	height: 70vh;
 	object-fit: cover;
 	object-position: center;
 }
@@ -250,25 +250,25 @@ grid-area: img3;
 
 .description{
 	position: relative;
-	height: 110vh;
+	height: 80vh;
 	margin-top:10vh;
 }
 
 .description img{
-	height: 110vh;
+	height: 80vh;
 	border-radius: 2em;
 	position: absolute;
 	left:10%;
 }
 
 .description div{
-	width: 90vh;
-	height: 90vh;
+	width: 80vh;
+	height: 80vh;
 	background-color: var(--lightblue);
 	border-radius: 50%;
 	position: absolute;
 	left:45%;
-	top:10vh;
+	top:2.5vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -279,9 +279,8 @@ grid-area: img3;
 .description div ul{
 	list-style: inside;
 	color : var(--white);
-	font-size: 2.5em;
-	display: grid;
-  gap: 5vh;
+	font-size: 2.5vw;
+
 }
 
 /*CARTE*/
@@ -305,9 +304,9 @@ grid-area: img3;
 .carte div{
 	position:absolute;
 	background-color: var(--lightpink);
-	height: 100%;
+	height: 60%;
 	width: 100%;
-	margin-top:5vh;
+	margin-top:10vh;
 	margin-bottom:10vh;
 	left:0;
 	z-index: -1;

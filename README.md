@@ -20,3 +20,16 @@ mot de passe : 123
 L'utilisateur est invité à changer ses identifiants à la première connexion en se rendant dans le profil (accessible en cliquant sur le nom en haut à gauche une fois connecté).
 
 Depuis le panel, l'administrateur peut modifier 1) les plats (les ajouter, modifier, supprimer, rendre disponibles à la carte, gérer les allergènes), 2) les menus (en construction), 3) les images de la gallerie de la page d'accueil, 4) les horaires d'ouverture
+
+## Charte Graphique :
+-- Palette de couleurs : 
+lightpink : rgba(218, 175, 152, 1);
+pink      : rgba(159, 107, 90, 1);
+blue 	  : rgba(27, 64, 121, 1);
+lightblue : rgba(77, 124, 138, 1);
+white	  : rgba(254, 241, 231, 1);
+alpha	  : rgba(0, 0, 0, 0.5);
+
+-- Polices d'écriture : 
+font-family: 'Work Sans', sans-serif;
+font-family: 'Merriweather', serif;
