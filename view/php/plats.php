@@ -26,9 +26,12 @@
 			<input hidden type="int" name="idPlat">
 			<?php include './view/php/formPlats.php' ;?>
 			<input type="submit" value="Modifier le plat">
-		</form>
 
+		</form>
+		<a class='suppPlat' href="./index.php?uc=suppDish">Supprimer le plat</a>
 	</div>
+
+
 
 	</div>
 </div>

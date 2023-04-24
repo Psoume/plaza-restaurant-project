@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>
-      <?php 
+      Projet Plaza
+  </title>
+<?php 
       include './model/bddconnector.php'; 
       include './model/admin.php';
       include './model/allergen.php';
@@ -20,9 +22,8 @@
           echo "accueil"; 
       }
       ?>
-  </title>
-
-  <link rel="stylesheet" href="./view/style.css">
+ <link rel="stylesheet" media="screen and (min-width: 900px)" href="./view/style.css">
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="./view/styleMobile.css">
 
 <!-- Polices -->
 <link rel="preconnect" href="https://fonts.googleapis.com">

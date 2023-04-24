@@ -5,7 +5,7 @@
 if(isset($_POST['mail'], $_POST['password']))	
 {
 	$mail = htmlspecialchars($_POST['mail'], ENT_QUOTES, 'UTF-8');
-	$password = md5(htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8'));
+	$password = htmlspecialchars(md5($_POST['password']), ENT_QUOTES, 'UTF-8');
 	
 	// Vérification de la validité des identifiants
 	$admin = Admin::signIn($mail,$password);

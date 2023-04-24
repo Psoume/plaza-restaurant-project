@@ -8,4 +8,4 @@
 	</nav>
 	<img src="./view/img/restaurant.jpg">
 </header>
-<h1>Grand Plaza Restaurant</h1>
+<a href="./index.php?uc=accueil"><h1>Grand Plaza Restaurant</h1></a>

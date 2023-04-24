@@ -226,5 +226,18 @@ class Dish
     $dish = new Dish($result['idDish'],$result['name'],$result['price'],$result['description'],$result['isAvailable'],[$result['idCourse'],self::findCourse($result['idCourse'])],self::findAllergens($result['idDish']),$result['idMenu']);
     return $dish;
     }
+
+    public function deleteDish()
+    {      
+      $sql = "delete from Presents where idDish=:idDish;";
+      $data = PDOBD::getInstance()->getPdo()->prepare($sql);
+      $data->bindValue(':idDish', $this->idDish);
+      $data->execute();
+
+      $sql = "delete from Dish where idDish=:idDish;";
+      $data = PDOBD::getInstance()->getPdo()->prepare($sql);
+      $data->bindValue(':idDish', $this->idDish);
+      $data->execute();
+    }
 }
  ?>

@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll > 100) {
+    if (scroll > 50) {
         $('nav').fadeIn();
     } else {
         $('nav').fadeOut();
@@ -44,6 +44,7 @@ $('.liplat').click(function(){ //on click dans la liste
             $("input[name='name']").val(data['name']);
             $("input[name='price']").val(data['price']+'€');
             $("input[name='description']").val(data['description']);
+            $(".suppPlat").html("<a class='suppPlat' href='./index.php?uc=suppDish&id="+data['idDish']+"'>Supprimer le plat</a>");
 
             switch (data['isAvailable'])
                 {
